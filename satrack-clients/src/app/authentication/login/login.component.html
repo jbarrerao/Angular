@@ -4,16 +4,20 @@
     <img class="img-header" src="https://www.paginasamarillasdepanama.com/uploads/logos/logo-satrack.jpg" alt="satrack">    
     
     <mat-form-field class="user"> 
-        <input matInput placeholder="Input">
+        <input [formControl]="user" matInput placeholder="Input">
       </mat-form-field>
+
       <mat-form-field class="password">
-          <input matInput placeholder="Input">
+          <input type="password" [formControl]="password" matInput placeholder="Input">
         </mat-form-field>
-    <div><button mat-raised-button color="primary">Iniciar sesión</button></div>
+
+    <div class="div-button">
+      <button [disabled]="user.invalid || password.invalid" (click)="login()" mat-raised-button color="primary">Iniciar sesión</button>
+    </div>
   </div>
 
 
   <div class="container-img" fxLayout="row" fxLayoutAlign="center center" >
-    <img class="logo" src="https://www.satrack.com.co/wp-content/uploads/2018/08/satrack-logo-color.png" alt="satrack">
+    <img class="logo" src="../../../assets/img/client.jpg" alt="satrack">
   </div>
 </div>

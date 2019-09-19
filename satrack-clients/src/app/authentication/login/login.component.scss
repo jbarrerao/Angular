@@ -4,7 +4,7 @@
     .container-form 
     {
      width: 30%;
-     padding-top: 40px;     
+     padding: 40px 25px 0 25px;     
 
         .img-header{
             height: 125px;
@@ -19,6 +19,14 @@
         .password{
             width: 100%
         }
+
+        .div-button{
+            margin-top: 25px;
+            
+            button{
+                text-transform: uppercase
+            }
+        }
     }
 
     .container-img
@@ -27,8 +35,8 @@
      background-color: #f3f3f3;
     
       .logo{
-          height: 120px;
-          width: 400px;
+          height: 100%;
+          width: 100%;
       }        
     }
 }
