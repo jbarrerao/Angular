@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { DataProvider } from './Providers/data.provider';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AuthenticationModule,
     FlexLayoutModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
